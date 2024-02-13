@@ -133,3 +133,8 @@ blockquote::after, blockquote::before {
     margin: 0 0.5rem 0.5rem 0;
     border: 1px solid #edca1e;
 }
+
+.justify {
+    text-align: justify;
+    
+}
