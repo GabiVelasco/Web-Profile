@@ -9,7 +9,7 @@ body {
     font-weight: 350;
     font-size: 20px;
     line-height: 1.3;
-    background: #8d21e6;
+    background: #511285;
     color: #ccc;
     overflow-x: hidden;
     font-family: 'Trebuchet MS',
@@ -104,9 +104,10 @@ h4 {
 }
 
 .dots2 {
-    width: 40%;
-    top: 30%;
-    right: 45%;
+    width:30%;
+    padding:1em;
+    padding-top: 40%;
+    margin-right: 10%;
     
 }
 
@@ -138,3 +139,5 @@ blockquote::after, blockquote::before {
     text-align: justify;
     
 }
+
+.white { color:white;}
