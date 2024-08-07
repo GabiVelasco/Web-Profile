@@ -99,7 +99,7 @@ h4 {
 
 .dots1 {
     left: 6rem;
-    top: -15%;
+    top: -1rem;
    
 }
 
@@ -150,9 +150,10 @@ blockquote::after, blockquote::before {
 
 
 .projects-box {
+    height: fit-content;
     display: grid;
     grid-template-columns: repeat(1fr,1fr);
-    gap:10px;
+    gap:5px;
     align-items:start;
 
 }
@@ -176,7 +177,9 @@ blockquote::after, blockquote::before {
 
 
 
-@media screen and (max-width: 960px) {
+
+
+@media screen and (max-width: 900px) {
     .container, .skill-box, .fifty, .background, .right, .projects-box, .projects-box p {
         width: 100%;
         display: block;
@@ -185,44 +188,147 @@ blockquote::after, blockquote::before {
         margin-top: 20px;
     }
 
-    .skill-box {
-        grid-template-columns: 1fr;
-        display:block;
+
+    .skills-section { 
+        height:50lvh;
     }
 
     .projects-box {
-        grid-template-columns: 1fr;
+        height: fit-content;
+        align-items:start;
+    
     }
 
-    .projects-box p {
-        flex-direction: column;
+
+
+    .projects-box p a {
         align-items: flex-start;
+   
     }
 
     .projects-box p span {
         text-align: left;
-        margin-top: 5px;
+        margin-top: 2px;
+    }
+
+    .projects-section { 
+        height:50lvh;
+        display: block;
+        margin-top:300px;
+        padding-top: 600px;
+
     }
 
     section {
         display: block;
+        height: fit-content;
+        margin-bottom:20px;
+        margin-top:20px;
+        
   
+    }
+    article{
+        margin-bottom:20px;
+        margin-top:20px;
+
     }
 
     .fifty {
         display: block;
+        margin-top:20px;
+        margin-bottom: 20px; 
+        height:fit-content;
     }
 
     .fifty.right {
         margin-left: 0;
+        margin-top:20px;
+        margin-bottom: 20px; 
+        height:fit-content;
+        display: block;
     }
 
     *, *::before, *::after {
-        box-sizing: border-box;
+        box-sizing: block;
         margin: 0;
         padding: 0;
     }
 
-    .dots.dots1 { margin-top:-30rem; width:30rem; z-index:1;}
+    .dots {
+        display: block;
+        height: auto;
+        position: absolute;
+        z-index: 2;
+        width: 45%;
+        min-width: 300px;
+        
+    }
+    
+    .dots1 {
+        left: 20%;
+        top: -22rem;
+      
+        
+       
+    }
+
+    .skill-box {
+        display:block;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        height: 50lvh;
+        
+    
+    }
+    
+    .skill-box span {
+        box-sizing: border-box;
+        font-size: 85%;
+        padding: 0.25rem 0.75rem;
+        font-weight: 300;
+        border-radius: 1rem;
+        display: inline-block;
+        margin: 0 0.2rem 0.5rem 0;
+        border: 1px solid #edca1e;
+    }
+
+    .image-box {
+        display: block;
+        height: 20lvh;
+        margin-bottom:20px;
+        margin-top:-700px;
+        position:relative;
+        
+    
+    }
+
+    .aboutme { margin-top: 20rem;}
+    
+    .background {
+        margin-top: 15rem;
+    }
+
+    .background{
+      
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display:none;
+        height: 100%;
+        width: 50%;
+        z-index: -1;
+    }
+
+    .paddingnegative{margin-top:-10rem;}
    
 }
+
+.projects-section { 
+    height:50lvh; 
+    margin-top: 100px;}
+
+    .skills-section { 
+        height:50lvh;
+        margin-top: 200px;
+    }
+
+    
