@@ -125,14 +125,27 @@ blockquote::after, blockquote::before {
     
 }
 
+.skill-box {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+
+}
+
 .skill-box span {
+    box-sizing: border-box;
     font-size: 85%;
     padding: 0.25rem 0.75rem;
     font-weight: 300;
     border-radius: 1rem;
     display: inline-block;
-    margin: 0 0.5rem 0.5rem 0;
+    margin: 0 0.2rem 0.5rem 0;
     border: 1px solid #edca1e;
+}
+
+.skill-box span:hover {
+
+    background:#edca1e8f
 }
 
 .justify {
