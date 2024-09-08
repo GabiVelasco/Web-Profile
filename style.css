@@ -382,12 +382,14 @@ blockquote::after, blockquote::before {
         min-height: 300px;
         display: block;
         margin: 10px auto;
-        transition: filter 0.3s ease;
+   
         filter: grayscale(100%);
+        transition: filter 0.3s ease, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
       }
 
       .project:hover {
-        filter: grayscale(10%);
+        filter: grayscale(100%);
+        transform: scale(1.1);
       }
 
       .description {
