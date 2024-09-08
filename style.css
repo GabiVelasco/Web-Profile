@@ -132,8 +132,10 @@ blockquote::after, blockquote::before {
 }
 
 .skill-box {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: repeat(4,1fr);
+    width: 80%;
     
 
 }
@@ -147,6 +149,8 @@ blockquote::after, blockquote::before {
     display: inline-block;
     margin: 0 0.2rem 0.5rem 0;
     border: 1px solid #edca1e;
+    width: fit-content;
+    display: inline-block;
 }
 
 .skill-box span:hover {
