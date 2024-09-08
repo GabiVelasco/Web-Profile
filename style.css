@@ -37,6 +37,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: left;
+    padding:20px;
+    margin:20px;
 }
 
 .fifty {
@@ -95,11 +97,15 @@ h4 {
     position: absolute;
     z-index: -2;
     width: 40%;
+    padding-bottom:20px;
+    margin-bottom:20px;
 }
 
 .dots1 {
     left: 6rem;
     top: -1rem;
+    padding-bottom:20px;
+    margin-bottom:20px;
    
 }
 
@@ -127,7 +133,7 @@ blockquote::after, blockquote::before {
 
 .skill-box {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     
 
 }
@@ -180,7 +186,7 @@ blockquote::after, blockquote::before {
 
 
 @media screen and (max-width: 900px) {
-    .container, .skill-box, .fifty, .background, .right, .projects-box, .projects-box p {
+    .section, .container, .skill-box, .fifty, .background, .right, .projects-box, .projects-box p {
         width: 100%;
         display: block;
         align-items: center;
