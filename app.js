@@ -44,3 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 })
+
+
+
+document.querySelectorAll('.read-more').forEach(button => {
+    button.addEventListener('click', function () {
+      const projectInfo = this.previousElementSibling;
+      projectInfo.classList.toggle('show-more');
+      this.textContent = projectInfo.classList.contains('show-more') ? 'Read Less' : 'Read More';
+    });
+  });
+  
