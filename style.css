@@ -155,7 +155,8 @@ blockquote::after, blockquote::before {
 
 .skill-box span:hover {
 
-    background:#edca1e8f
+    background: #edca1e;
+    color: #5C3979;
 }
 
 
