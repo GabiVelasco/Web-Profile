@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -16,6 +23,8 @@ body {
     'Montserrat', sans-serif;
 }
 
+
+
 .background{
     background-image: url(/img/fakeimg.png);
     background-size: 150%;
@@ -29,6 +38,8 @@ body {
     clip-path: circle(20% at 55% 50%);
     z-index: -1;
 }
+
+
 
 section {
     position: relative;
@@ -101,18 +112,24 @@ h4 {
 .dots {
     display: block;
     height: auto;
-    position: absolute;
-    z-index: -2;
-    width: 40%;
-    padding-bottom:20px;
-    margin-bottom:20px;
+    position: relative;
+    margin: 20px auto;
+   
 }
 
+
+
 .dots1 {
-    left: 6rem;
-    top: -1rem;
-    padding-bottom:20px;
-    margin-bottom:20px;
+    display: block;
+    height: auto;
+    position: relative;
+    z-index: -2;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 100px;
+    
+   
    
 }
 
@@ -138,6 +155,8 @@ blockquote::after, blockquote::before {
     
 }
 
+
+
 .skill-box {
     display: flex;
     flex-wrap: wrap;
@@ -153,7 +172,6 @@ blockquote::after, blockquote::before {
     padding: 0.25rem 0.75rem;
     font-weight: 300;
     border-radius: 1rem;
-    display: inline-block;
     margin: 0 0.2rem 0.5rem 0;
     border: 1px solid #edca1e;
     width: fit-content;
@@ -168,13 +186,13 @@ blockquote::after, blockquote::before {
 
 
 .projects-box {
-    height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(1fr,1fr);
-    gap:5px;
-    align-items:start;
+    display: flex;
+    gap: 50px; /* Increased spacing between cards */
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 0 auto;
 
-}
+  }
 
 .projects-box p { 
     display:flex;
@@ -197,183 +215,29 @@ blockquote::after, blockquote::before {
 
 
 
-@media screen and (max-width: 900px) {
-    .section, .container, .skill-box, .fifty, .background, .right, .projects-box, .projects-box p {
-        width: 100%;
-        display: block;
-        align-items: center;
-        padding-top: 20px;
-        margin-top: 20px;
-    }
+
 
 
     .skills-section { 
-        height:fit-content;
-    }
-
-    .skill-box span{
-
-        padding:0;
-        margin:0
-    }
-
-    .projects-box {
-        height: fit-content;
-        align-items:start;
-    
-    }
-
-
-
-    .projects-box p a {
-        align-items: flex-start;
-   
-    }
-
-    .projects-box p span {
-        text-align: left;
-        margin-top: 2px;
-    }
-
-    .projects-section { 
-        height:50lvh;
-        display: block;
-        margin-top:300px;
-        padding-top: 600px;
-
-    }
-
-    section {
-        display: block;
-        height: fit-content;
-        margin-bottom:20px;
-        margin-top:20px;
-        
-  
-    }
-    article{
-        margin-bottom:20px;
-        margin-top:20px;
-
-    }
-
-    .fifty {
-        display: block;
-        margin-top:20px;
-        margin-bottom: 20px; 
-        height:fit-content;
-    }
-
-    .fifty.right {
-        margin-left: 0;
-        margin-top:20px;
-        margin-bottom: 20px; 
-        height:fit-content;
-        display: block;
-    }
-
-    *, *::before, *::after {
-        box-sizing: block;
-        margin: 0;
-        padding: 0;
-    }
-
-    .dots {
-        display: block;
-        height: auto;
-        position: absolute;
-        z-index: 2;
-        width: 45%;
-        min-width: 300px;
-        
-    }
-    
-    .dots1 {
-        left: 20%;
-        top: -22rem;
-      
-        
-       
-    }
-
-    .skill-box {
-        display:block;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        height: 50lvh;
-        
-    
-    }
-    
-    .skill-box span {
-        box-sizing: border-box;
-        font-size: 85%;
-        padding: 0.25rem 0.75rem;
-        font-weight: 300;
-        border-radius: 1rem;
-        display: inline-block;
-        margin: 0 0.2rem 0.5rem 0;
-        border: 1px solid #edca1e;
-    }
-
-    .image-box {
-        display: block;
-        height: 20lvh;
-        margin-bottom:20px;
-        margin-top:-700px;
-        position:relative;
-        
-    
-    }
-
-    .aboutme { margin-top: 20rem;}
-    
-    .background {
-        margin-top: 15rem;
-    }
-
-    .background{
-      
-        background-size: 100%;
-        background-repeat: no-repeat;
-        display:none;
-        height: 100%;
-        width: 50%;
-        z-index: -1;
-    }
-
-    .paddingnegative{margin-top:-10rem;}
-   
-}
-
-.projects-section { 
-    height:50lvh; 
-    margin-top: 100px;}
-
-    .skills-section { 
-        height:50lvh;
-        margin-top: 200px;
+     margin: 0 auto;
+     padding-top: 20px;
+     display: block;
     }
 
     
 
     /* EXPANDING PROJECTS */
 
+
     .projects-section {
         display: block;
-        margin-top: 100px;
-        padding-top: 50px;
         color: #ccc;
+        margin: 0 auto;
+       
  
       }
       
-      .projects-box {
-        display: flex;
-        gap: 50px; /* Increased spacing between cards */
-        flex-wrap: wrap;
-        padding: 20px;
-    
-      }
+ 
       
       .project {
         flex: 1 1 calc(33.33% - 30px); /* Ensures cards are the same size */
@@ -387,17 +251,16 @@ blockquote::after, blockquote::before {
         align-items: center;
         min-height: 300px;
         display: block;
-        margin: 10px auto;
+        margin: 20px auto;
         min-width: 300px;
         max-width: 400px;
-   
         filter: grayscale(100%);
         transition: filter 0.3s ease, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
       }
 
       .project:hover {
         filter: grayscale(100%);
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
 
       .description {
@@ -489,3 +352,569 @@ blockquote::after, blockquote::before {
       
     
     /* END - EXPANDING PROJECTS */
+
+    .aboutme {  display:block; margin: 20px auto;}
+    
+    .paddingnegative{margin: 1000px auto; display: block;}
+
+
+
+
+@media screen and (max-width: 900px) {
+   
+
+    section{
+        width: 100%;
+        display: block;
+        align-items: center;
+       
+        margin: 20px auto;
+        height: auto;
+    }
+    .section{
+        width: 100%;
+        display: block;
+        align-items: center;
+        
+        margin: 20px auto;
+        height: auto;
+    }
+
+   .container{
+        width: 100%;
+        display: block;
+        align-items: center;
+        margin: 0 auto;
+        height: auto;
+    }
+     
+.skill-box {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4,1fr);
+    width: 80%;
+    margin: 10px auto;
+    
+
+}
+
+.skill-box span {
+    box-sizing: border-box;
+    font-size: 85%;
+    padding: 0.25rem 0.75rem;
+    font-weight: 300;
+    border-radius: 1rem;
+    margin: 0 0.2rem 0.5rem 0;
+    border: 1px solid #edca1e;
+    width: fit-content;
+    display: inline-block;
+}
+
+.skill-box span:hover {
+
+    background: #edca1e;
+    color: #5C3979;
+}
+
+
+
+     .fifty {
+        width: 100%;
+        display: block;
+        align-items: center;
+        margin: 20px auto;
+        height: auto;
+    }
+
+
+    .background{
+      
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display:none;
+        height: 100lvh;
+        width: 50%;
+        z-index: -1;
+    }
+
+    .right {
+            width: 100%;
+            display: block;
+            align-items: center;
+            margin: 20px auto;
+            height: auto;
+        }
+
+    .fifty.right {
+        height:fit-content;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .projects-box {
+        width: 100%;
+        display: block;
+        align-items: center;
+        margin: 20px auto;
+        height: auto;
+    }
+
+   .projects-box p {
+        width: 100%;
+        display: block;
+        align-items: center;
+        margin: 20px auto;
+        height: auto;
+    }
+
+    .projects-section{
+        width: 100%;
+        display: block;
+        align-items: center;
+        margin: 20px auto;
+        height: auto;
+        padding: 0px;
+    }
+
+    .skills-section {
+        width: 100%;
+        display: block;
+        align-items: center;
+        margin: 20px auto;
+        height: auto;
+        height:fit-content;
+    }
+
+    .aboutme {
+        width: 100%;
+        display: block;
+        align-items: center;
+        margin: 20px auto;
+        height: auto;
+        
+    }
+
+
+    .skill-box span {
+        box-sizing: border-box;
+        font-size: 85%;
+        padding: 0.25rem 0.75rem;
+        font-weight: 300;
+        border-radius: 1rem;
+        margin: 0 0.2rem 0.5rem 0;
+        border: 1px solid #edca1e;
+        width: fit-content;
+        display: inline-block;
+    }
+    
+    .skill-box span:hover {
+    
+        background: #edca1e;
+        color: #5C3979;
+    }
+
+
+
+ 
+    article{
+     margin: 20px auto;
+
+    }
+
+
+    *, *::before, *::after {
+        box-sizing: block;
+   
+     
+    }
+
+
+    .dots {
+        display: block;
+        height: auto;
+        position: relative;
+        margin: 10px auto;
+       
+    }
+    
+    .dots1 {
+        display: block;
+        height: auto;
+        position: relative;
+        z-index: -2;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        
+        
+       
+       
+    }
+
+
+   
+}
+
+
+
+
+
+
+
+@media screen and(min-width:900px) {
+
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    body {
+        font-weight: 350;
+        font-size: 20px;
+        line-height: 1.3;
+        background: #5c3979;
+        color: #ccc;
+        overflow-x: hidden;
+        font-family: 'Trebuchet MS',
+        'Montserrat', sans-serif;
+    }
+    
+    
+    
+    .background{
+        background-image: url(/img/fakeimg.png);
+        background-size: 150%;
+        background-repeat: no-repeat;
+        background-color:#edca1e;
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        clip-path: circle(20% at 55% 50%);
+        z-index: -1;
+    }
+    
+    
+    
+    section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding:20px;
+        margin:20px;
+    }
+    
+    .fifty {
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem;
+        gap: 1rem;
+        width: 50%;
+        height: 100%;
+        display: flex;
+    }
+    
+    .fifty.right {
+        margin-left: 50%;
+    }
+    
+    a {
+        color: #edca1e;
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+    
+    
+    a:hover {
+        transform: scale(1.1);
+    
+    }
+    
+    h1 {
+        font-size: 4.5rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h1, h2 {
+        font-weight: 600;
+    }
+    
+    h1, h2, h3 {
+        color: #fff;
+    }
+    
+    h2:after {
+        content: '';
+        width: 5rem;
+        display: block;
+        margin-top: 0.5rem;
+        border-bottom: 5px dashed #edca1e;
+    }
+    
+    h3 {
+        font-weight:lighter;
+    }
+    
+    h4 {
+        font-size: 1.50rem;
+    }
+    
+    .dots {
+        display: block;
+        height: auto;
+        position: relative;
+        margin: 20px auto;
+       
+    }
+    
+    
+    
+    .dots1 {
+        display: block;
+        height: auto;
+        position: relative;
+        z-index: -2;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding-top: 100px;
+        
+       
+       
+    }
+    
+    .dots2 {
+        width:30%;
+        padding:1em;
+        padding-top: 40%;
+        margin-right: 10%;
+        
+    }
+    
+    blockquote {
+        font-style: italic;
+        padding: 2rem;
+        background: rgb(255, 255, 255, 0.1);
+        border-radius: 1rem;
+    }
+    
+    blockquote::after, blockquote::before {
+        font-size: 2rem;
+        content: '"';
+        color: #edca1e;
+        
+    }
+    
+    
+    
+    .skill-box {
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(4,1fr);
+        width: 80%;
+        
+    
+    }
+    
+    .skill-box span {
+        box-sizing: border-box;
+        font-size: 85%;
+        padding: 0.25rem 0.75rem;
+        font-weight: 300;
+        border-radius: 1rem;
+        margin: 0 0.2rem 0.5rem 0;
+        border: 1px solid #edca1e;
+        width: fit-content;
+        display: inline-block;
+    }
+    
+    .skill-box span:hover {
+    
+        background: #edca1e;
+        color: #5C3979;
+    }
+    
+    
+    .projects-box {
+        display: flex;
+        gap: 50px; /* Increased spacing between cards */
+        flex-wrap: wrap;
+        padding: 20px;
+        margin: 0 auto;
+    
+      }
+    
+    .projects-box p { 
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    
+    .projects p span {
+        text-align:right;
+    }
+    
+    .justify {
+        text-align: justify;
+        
+    }
+    
+    .white { color:white;}
+    
+    
+    
+    
+    
+    
+    
+    
+        .skills-section { 
+         margin: 0 auto;
+         padding-top: 10px;
+         display: block;
+        }
+    
+        
+    
+        /* EXPANDING PROJECTS */
+    
+    
+        .projects-section {
+            display: block;
+            color: #ccc;
+            margin: 0 auto;
+           
+     
+          }
+          
+     
+          
+          .project {
+            flex: 1 1 calc(33.33% - 30px); /* Ensures cards are the same size */
+            background-color: white;
+            border: 4px solid  #edca1e ;
+            padding: 10px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            min-height: 300px;
+            display: block;
+            margin: 20px auto;
+            min-width: 300px;
+            max-width: 400px;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+          }
+    
+          .project:hover {
+            filter: grayscale(100%);
+            transform: scale(1.1);
+          }
+    
+          .description {
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            display: block;
+          }
+          
+          .project img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: filter 0.3s ease;
+           
+            border: 4px solid  #edca1e ;
+          }
+    
+          .project img:hover {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            filter: grayscale(0);
+          }
+          
+          .project-info {
+            margin-top: 15px;
+          }
+          
+          .project-info h4 {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #5c3979;
+          }
+          
+          .project-info p {
+            font-size: 0.9em;
+            
+          }
+    
+          .project-info span {
+            color: #5c3979;
+          }
+          
+          .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color:#edca1e;
+            color: #5c3979;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+          }
+          
+          .project-link:hover {
+            background-color: #5c397900;
+            color: #5c3979;
+            transform: scale(1.2);
+          }
+          
+          .read-more {
+            background: none;
+            border: none;
+            color: #edca1e;
+            cursor: pointer;
+            margin-top: 5px;
+          }
+          
+          .more-text {
+            display: none;
+          }
+          
+          .show-more .more-text {
+            display: block;
+            margin: 10px auto;
+          }
+          
+          .show-more .dots {
+            display: none;
+          }
+          
+    
+          .project a {
+            margin: 10px auto;
+          }
+    
+          
+        
+        /* END - EXPANDING PROJECTS */
+    
+        .aboutme {  display:block; margin: 20px auto;}
+        
+        .paddingnegative{margin: 1000px auto; display: block;}
+    
+    
+    }
