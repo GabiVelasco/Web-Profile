@@ -274,8 +274,14 @@ blockquote::after, blockquote::before {
         filter: grayscale(0%);
         transform: scale(1.1);
       }
+      .project h4 {
+
+        font-weight: 200;
+        color:#5C3979;
+      }
 
       .description {
+        font-size: 18px;
         justify-content: center;
         text-align: center;
         align-items: center;
@@ -362,8 +368,19 @@ blockquote::after, blockquote::before {
         display: block;
         margin: 10px auto;
         font-size: 16px;
-        justify-content: justify;
+        text-align: justify;
+        width:90%;
       }
+
+      .technologies, .technologies strong, .technologies p{
+        display: block;
+        margin: 5px auto;
+        font-size: 18px;
+        text-align: center;
+        width:90%;
+        justify-content: center
+      }
+      
       
       .show-more .dots {
         display: none;
@@ -432,6 +449,12 @@ blockquote::after, blockquote::before {
         transform: scale(1.1);
       }
 
+      .project h4 {
+
+        font-weight: 200;
+        color:#5C3979;
+      }
+
       .project-info span {
         color: #5c3979;
         font-size: 18px;
@@ -473,9 +496,17 @@ blockquote::after, blockquote::before {
         display: block;
         margin: 10px auto;
         font-size: 16px;
-        justify-content: justify;
+        text-align: justify;
+        width:90%;
       }
-   
+      .technologies, .technologies strong, .technologies p{
+        display: block;
+        margin: 5px auto;
+        font-size: 18px;
+        text-align: center;
+        width:90%;
+        justify-content: center
+      }
 
     section{
         width: 100%;
@@ -968,8 +999,14 @@ blockquote::after, blockquote::before {
             filter: grayscale(0%);
             transform: scale(1.1);
           }
+          .project h4 {
+
+            font-weight: 200;
+            color:#5C3979;
+          }
     
           .description {
+            font-size: 18px;
             justify-content: center;
             text-align: center;
             align-items: center;
@@ -1061,7 +1098,16 @@ blockquote::after, blockquote::before {
             display: block;
             margin: 10px auto;
             font-size: 16px;
-            justify-content: justify;
+            text-align: justify;
+            width:90%;
+          }
+          .technologies, .technologies strong, .technologies p{
+            display: block;
+            margin: 5px auto;
+            font-size: 18px;
+            text-align: center;
+            width:90%;
+            justify-content: center
           }
           
           .show-more .dots {
