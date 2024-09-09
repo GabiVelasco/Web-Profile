@@ -378,7 +378,24 @@ blockquote::after, blockquote::before {
         margin: 0 auto;
         padding: 60px 0 0 0;
         width: 100%;
+        font-size: 25px;
    }
+
+   .quotetext {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 25px;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+.skills-section h3 {
+   
+    margin: 10px auto;
+    
+
+}
+
 
     
     .project {
@@ -440,6 +457,13 @@ blockquote::after, blockquote::before {
     
 
 }
+.skills-section h3 {
+   
+    margin: 10px auto;
+    
+
+}
+
 
 .skill-box span {
     box-sizing: border-box;
@@ -658,7 +682,25 @@ blockquote::after, blockquote::before {
         margin: 0 auto;
         padding: 300px 0 60px 0;
         width: 100%;
+        font-size: 30px;
+        text-align: left;
    }
+
+   .quotetext {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    justify-content: left;
+    align-items: center;
+}
+.skills-section h3 {
+   
+    margin: 10px auto;
+    
+
+}
+
     
     .fifty {
         flex-direction: column;
