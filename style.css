@@ -675,7 +675,7 @@ blockquote::after, blockquote::before {
         margin: 20px auto;
         display: block;
         width: 100%;
-        padding: 60px;
+        padding: 0px 60px 20px 60px;
        }
 
     .aboutme {
@@ -738,6 +738,7 @@ blockquote::after, blockquote::before {
         width: 100%;
         max-width: 500px;
         margin: 0 auto;
+        min-width:300px;
         
         
        
