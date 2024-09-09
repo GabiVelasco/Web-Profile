@@ -649,7 +649,7 @@ blockquote::after, blockquote::before {
         display: flex;
         gap: 20px; /* Increased spacing between cards */
         flex-wrap: wrap;
-        padding: 20px;
+        padding: 10px;
         margin: 0 auto;
     
       }
@@ -658,7 +658,7 @@ blockquote::after, blockquote::before {
         width: 100%;
         display: block;
         align-items: center;
-        margin: 20px auto;
+        margin: 10px auto;
         height: auto;
     }
 
@@ -666,7 +666,7 @@ blockquote::after, blockquote::before {
         width: 100%;
         display: block;
         align-items: center;
-        margin: 20px auto;
+        margin: 0px auto;
         height: auto;
         padding: 60px;
     }
