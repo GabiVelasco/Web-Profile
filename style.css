@@ -208,7 +208,13 @@ blockquote::after, blockquote::before {
 
 
     .skills-section { 
-        height:50lvh;
+        height:fit-content;
+    }
+
+    .skill-box span{
+
+        padding:0;
+        margin:0
     }
 
     .projects-box {
@@ -382,6 +388,8 @@ blockquote::after, blockquote::before {
         min-height: 300px;
         display: block;
         margin: 10px auto;
+        min-width: 300px;
+        max-width: 400px;
    
         filter: grayscale(100%);
         transition: filter 0.3s ease, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
