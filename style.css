@@ -314,16 +314,25 @@ blockquote::after, blockquote::before {
         
       }
 
+   
+      
       .project-info span {
         color: #5c3979;
+        justify-content: justify
+      }
+      
+    
+      .project-info a {
+        color: #5c3979;
+        color: #edca1e;
       }
       
       .project-link {
         display: inline-block;
         margin-top: 10px;
         padding: 8px 12px;
-        background-color:#edca1e;
-        color: #5c3979;
+        background-color: gray;
+        color: #edca1e !important;
         text-decoration: none;
         border-radius: 5px;
         transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -334,6 +343,7 @@ blockquote::after, blockquote::before {
         color: #5c3979;
         transform: scale(1.2);
       }
+
       
       .read-more {
         background: none;
@@ -350,6 +360,8 @@ blockquote::after, blockquote::before {
       .show-more .more-text {
         display: block;
         margin: 10px auto;
+        font-size: 16px;
+        justify-content: justify;
       }
       
       .show-more .dots {
@@ -357,10 +369,7 @@ blockquote::after, blockquote::before {
       }
       
 
-      .project a {
-        margin: 10px auto;
-      }
-
+     
       
     
     /* END - EXPANDING PROJECTS */
@@ -421,6 +430,48 @@ blockquote::after, blockquote::before {
         filter: grayscale(0%);
         transform: scale(1.1);
       }
+
+      .project-info span {
+        color: #5c3979;
+        font-size: 18px;
+        justify-content: justify;
+      }
+      
+     
+      .project-info a {
+        color: #5c3979;
+        font-size: 18px;
+        justify-content: justify;
+     
+      }
+      
+      .project-link {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 12px;
+        background-color: gray;
+        color: #edca1e !important;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+      
+      .project-link:hover {
+        background-color: #5c397900;
+        color: #5c3979;
+        transform: scale(1.2);
+      }
+
+      .more-text {
+        display: none;
+      }
+      
+      .show-more .more-text {
+        display: block;
+        margin: 10px auto;
+        font-size: 16px;
+        justify-content: justify;
+      }
    
 
     section{
@@ -453,12 +504,6 @@ blockquote::after, blockquote::before {
     flex-wrap: wrap;
     grid-template-columns: repeat(4,1fr);
     width: 100%;
-    margin: 10px auto;
-    
-
-}
-.skills-section h3 {
-   
     margin: 10px auto;
     
 
@@ -962,14 +1007,21 @@ blockquote::after, blockquote::before {
     
           .project-info span {
             color: #5c3979;
+            justify-content: justify
+          }
+          
+         
+          .project-info a {
+            color: #5c3979;
+            color: #edca1e;
           }
           
           .project-link {
             display: inline-block;
             margin-top: 10px;
             padding: 8px 12px;
-            background-color:#edca1e;
-            color: #5c3979;
+            background-color: gray;
+            color: #edca1e !important;
             text-decoration: none;
             border-radius: 5px;
             transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -980,7 +1032,14 @@ blockquote::after, blockquote::before {
             color: #5c3979;
             transform: scale(1.2);
           }
+    
+          .project a {
+            margin: 10px auto;
+            color: #5c3979;
+          }
+    
           
+        
           .read-more {
             background: none;
             border: none;
@@ -996,6 +1055,8 @@ blockquote::after, blockquote::before {
           .show-more .more-text {
             display: block;
             margin: 10px auto;
+            font-size: 16px;
+            justify-content: justify;
           }
           
           .show-more .dots {
