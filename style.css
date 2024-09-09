@@ -258,8 +258,8 @@ blockquote::after, blockquote::before {
         text-align: center;
         align-items: center;
         min-height: 100px;
-        max-width: 200px;
-        min-width: 100px;
+        min-width: 200px;
+        max-width: 300px;
         display: block;
         margin: 20px auto;
         filter: grayscale(0%);
@@ -370,6 +370,12 @@ blockquote::after, blockquote::before {
 
 @media screen and (max-width: 900px) {
 
+    .quote {
+        margin: 0 auto;
+        padding: 60px 0 0 0;
+        width: 100%;
+   }
+
     
     .project {
         flex: 1 1 calc(33.33% - 30px); /* Ensures cards are the same size */
@@ -384,7 +390,7 @@ blockquote::after, blockquote::before {
         display: block;
         margin: 20px auto;
         min-height: 200px;
-        min-width: 200px;
+        min-width: 300px;
         max-width: 300px;
         filter: grayscale(0%);
         transition: filter 0.3s ease, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -642,6 +648,13 @@ blockquote::after, blockquote::before {
         padding:20px;
         margin:20px;
     }
+
+
+    .quote {
+        margin: 0 auto;
+        padding: 300px 0 60px 0;
+        width: 100%;
+   }
     
     .fifty {
         flex-direction: column;
@@ -809,7 +822,7 @@ blockquote::after, blockquote::before {
      margin: 20px auto;
      display: block;
      width: 100%;
-     top: -300px;
+     top: -500px;
      height: fit-content;
      padding: 60px;
         
@@ -824,8 +837,9 @@ blockquote::after, blockquote::before {
             display: block;
             color: #ccc;
             margin: 20px auto;
-            top: -200px;
+            top: -400px;
             padding: 60px;
+            bottom: -400px;
            
      
           }
