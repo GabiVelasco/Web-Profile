@@ -189,7 +189,7 @@ blockquote::after, blockquote::before {
 
 .projects-box {
     display: flex;
-    gap: 20px; /* Increased spacing between cards */
+    gap: 15px; /* Increased spacing between cards */
     flex-wrap: wrap;
     padding: 10px;
     margin: 0 auto;
@@ -255,11 +255,11 @@ blockquote::after, blockquote::before {
         justify-content: center;
         text-align: center;
         align-items: center;
-        min-height: 300px;
+        min-height: 100px;
+        max-width: 200px;
+        min-width: 100px;
         display: block;
         margin: 20px auto;
-        min-width: 300px;
-        max-width: 400px;
         filter: grayscale(100%);
         transition: filter 0.3s ease, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
       }
@@ -379,11 +379,11 @@ blockquote::after, blockquote::before {
         justify-content: center;
         text-align: center;
         align-items: center;
-        min-height: 200px;
         display: block;
         margin: 20px auto;
+        min-height: 200px;
         min-width: 200px;
-        max-width: 400px;
+        max-width: 300px;
         filter: grayscale(100%);
         transition: filter 0.3s ease, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
       }
@@ -483,12 +483,13 @@ blockquote::after, blockquote::before {
     }
 
     .projects-box {
-        width: 100%;
-        display: block;
-        align-items: center;
-        margin: 20px auto;
-        height: auto;
-    }
+        display: flex;
+        gap: 20px; /* Increased spacing between cards */
+        flex-wrap: wrap;
+        padding: 20px;
+        margin: 0 auto;
+    
+      }
 
    .projects-box p {
         width: 100%;
