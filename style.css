@@ -229,10 +229,14 @@ blockquote::after, blockquote::before {
     /* EXPANDING PROJECTS */
 
 
-    .projects-section {
+      
+ 
+     
+      .projects-section {
         display: block;
         color: #ccc;
         margin: 0 auto;
+        top:-30%;
        
  
       }
@@ -259,8 +263,8 @@ blockquote::after, blockquote::before {
       }
 
       .project:hover {
-        filter: grayscale(100%);
-        transform: scale(1.05);
+        filter: grayscale(0%);
+        transform: scale(1.1);
       }
 
       .description {
@@ -716,7 +720,7 @@ blockquote::after, blockquote::before {
         display: flex;
         flex-wrap: wrap;
         grid-template-columns: repeat(4,1fr);
-        width: 80%;
+        width: 65%;
         
     
     }
@@ -782,7 +786,7 @@ blockquote::after, blockquote::before {
             display: block;
             color: #ccc;
             margin: 0 auto;
-            top:-500px;
+            top:-30%;
            
      
           }
@@ -809,7 +813,7 @@ blockquote::after, blockquote::before {
           }
     
           .project:hover {
-            filter: grayscale(100%);
+            filter: grayscale(0%);
             transform: scale(1.1);
           }
     
