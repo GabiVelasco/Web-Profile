@@ -262,7 +262,7 @@ blockquote::after, blockquote::before {
         min-width: 100px;
         display: block;
         margin: 20px auto;
-        filter: grayscale(100%);
+        filter: grayscale(0%);
         transition: filter 0.3s ease, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
       }
 
@@ -386,7 +386,7 @@ blockquote::after, blockquote::before {
         min-height: 200px;
         min-width: 200px;
         max-width: 300px;
-        filter: grayscale(100%);
+        filter: grayscale(0%);
         transition: filter 0.3s ease, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
       }
 
@@ -847,7 +847,7 @@ blockquote::after, blockquote::before {
             margin: 20px auto;
             min-width: 300px;
             max-width: 400px;
-            filter: grayscale(100%);
+            filter: grayscale(0%);
             transition: filter 0.3s ease, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
           }
     
