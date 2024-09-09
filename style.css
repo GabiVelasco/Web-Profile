@@ -224,6 +224,7 @@ blockquote::after, blockquote::before {
      margin: 20px auto;
      display: block;
      width: 100%;
+     padding: 60px;
      
      
     }
@@ -240,6 +241,7 @@ blockquote::after, blockquote::before {
         display: block;
         color: #ccc;
         margin: 20px auto;
+        padding: 60px;
  
       }
       
@@ -505,13 +507,14 @@ blockquote::after, blockquote::before {
         align-items: center;
         margin: 20px auto;
         height: auto;
-        padding: 20px;
+        padding: 60px;
     }
 
     .skills-section { 
         margin: 20px auto;
         display: block;
         width: 100%;
+        padding: 60px;
        }
 
     .aboutme {
@@ -777,7 +780,7 @@ blockquote::after, blockquote::before {
     
     .projects-box {
         display: flex;
-        gap: 50px; /* Increased spacing between cards */
+        gap: 20px; /* Increased spacing between cards */
         flex-wrap: wrap;
         padding: 20px;
         margin: 0 auto;
@@ -808,6 +811,7 @@ blockquote::after, blockquote::before {
      width: 100%;
      top: -300px;
      height: fit-content;
+     padding: 60px;
         
         
        }
@@ -821,6 +825,7 @@ blockquote::after, blockquote::before {
             color: #ccc;
             margin: 20px auto;
             top: -200px;
+            padding: 60px;
            
      
           }
