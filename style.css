@@ -220,8 +220,8 @@ blockquote::after, blockquote::before {
 
     .skills-section { 
      margin: 0 auto;
-     padding-top: 20px;
      display: block;
+     
     }
 
     
@@ -476,14 +476,10 @@ blockquote::after, blockquote::before {
         padding: 0px;
     }
 
-    .skills-section {
-        width: 100%;
+    .skills-section { 
+        margin: 0 auto;
         display: block;
-        align-items: center;
-        margin: 20px auto;
-        height: auto;
-        height:fit-content;
-    }
+       }
 
     .aboutme {
         width: 100%;
@@ -561,7 +557,7 @@ blockquote::after, blockquote::before {
 
 
 
-@media screen and(min-width:900px) {
+@media screen and (min-width:900px) {
 
 
     *, *::before, *::after {
@@ -769,20 +765,14 @@ blockquote::after, blockquote::before {
     }
     
     .white { color:white;}
+
     
-    
-    
-    
-    
-    
-    
-    
-        .skills-section { 
-         margin: 0 auto;
-         padding-top: 10px;
-         display: block;
-        }
-    
+    .skills-section { 
+        margin: 0 auto;
+        display: block;
+        top:-200px;
+        
+       }
         
     
         /* EXPANDING PROJECTS */
@@ -792,6 +782,7 @@ blockquote::after, blockquote::before {
             display: block;
             color: #ccc;
             margin: 0 auto;
+            top:-500px;
            
      
           }
@@ -912,9 +903,14 @@ blockquote::after, blockquote::before {
         
         /* END - EXPANDING PROJECTS */
     
-        .aboutme {  display:block; margin: 20px auto;}
+        .aboutme {  
+            display:block; 
+            margin: 20px auto;
+            top: -200px;
+        }
         
         .paddingnegative{margin: 1000px auto; display: block;}
     
     
     }
+
