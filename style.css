@@ -328,8 +328,9 @@ blockquote::after, blockquote::before {
       }
       
       .project-link {
+        font-size: 16px;
+        margin: 20px auto;
         display: inline-block;
-        margin-top: 10px;
         padding: 8px 12px;
         background-color: gray;
         color: #edca1e !important;
@@ -446,6 +447,8 @@ blockquote::after, blockquote::before {
       }
       
       .project-link {
+        font-size: 14px !important;
+        margin: 20px auto;
         display: inline-block;
         margin-top: 10px;
         padding: 8px 12px;
@@ -1017,6 +1020,8 @@ blockquote::after, blockquote::before {
           }
           
           .project-link {
+            font-size: 16px;
+            margin: 20px auto;
             display: inline-block;
             margin-top: 10px;
             padding: 8px 12px;
