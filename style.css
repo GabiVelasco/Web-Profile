@@ -161,8 +161,12 @@ blockquote::after, blockquote::before {
     display: flex;
     flex-wrap: wrap;
     grid-template-columns: repeat(4,1fr);
-    width: 100%;
+    width: 50%;
     margin: 10px auto;
+    align-items:left;
+    justify-content: left;
+    left: 0;
+    margin-left: 0;
     
     
 
@@ -368,7 +372,7 @@ blockquote::after, blockquote::before {
 
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1020px) {
 
     .quote {
         margin: 0 auto;
@@ -599,7 +603,7 @@ blockquote::after, blockquote::before {
 
 
 
-@media screen and (min-width:900px) {
+@media screen and (min-width:1020px) {
 
 
     *, *::before, *::after {
@@ -765,8 +769,12 @@ blockquote::after, blockquote::before {
         display: flex;
         flex-wrap: wrap;
         grid-template-columns: repeat(4,1fr);
-        width: 100%;
+        width: 50%;
         margin: 10px auto;
+        align-items:left;
+        justify-content: left;
+        left: 0;
+        margin-left: 0;
         
         
     
@@ -774,7 +782,7 @@ blockquote::after, blockquote::before {
     
     .skill-box span {
         box-sizing: border-box;
-        font-size: 85%;
+        font-size: 75%;
         padding: 0.25rem 0.75rem;
         font-weight: 300;
         border-radius: 1rem;
@@ -782,6 +790,7 @@ blockquote::after, blockquote::before {
         border: 1px solid #edca1e;
         width: fit-content;
         display: inline-block;
+        align-items: left;
     }
     
     .skill-box span:hover {
