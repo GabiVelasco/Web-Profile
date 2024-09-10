@@ -626,8 +626,9 @@ section {
         width: 100%;
         display: block;
         align-items: center;
-        margin: 10px auto;
+        margin: 0px auto;
         height: auto;
+        padding: 20px;
     }
 
 
@@ -645,14 +646,16 @@ section {
             width: 100%;
             display: block;
             align-items: center;
-            margin: 10px auto;
+            margin: 0px auto;
             height: auto;
+            padding: 20px;
         }
 
     .fifty.right {
         height:fit-content;
         display: block;
-        margin: 10px auto;
+        margin: 0px auto;
+        padding: 20px;
     }
 
     .projects-box {
@@ -692,8 +695,9 @@ section {
         width: 100%;
         display: block;
         align-items: center;
-        margin: 10px auto;
+        margin: 0px auto;
         height: auto;
+        padding: 0;
         
     }
 
@@ -736,7 +740,7 @@ section {
         display: block;
         height: auto;
         position: relative;
-        margin: 10px auto;
+        margin: 0px auto;
        
     }
     
