@@ -6,6 +6,8 @@
 
 Welcome to my web profile! I'm Gabriela Velasco, an inspired web developer with a passion for blending technology with artistic dance expression.
 
+https://gabivelasco.github.io/Web-Profile/
+
 ## Overview
 
 This web profile showcases my unique approach to integrating dance and technology. Through my background in dance and web development, I offer a creative perspective that brings innovative solutions to the digital world. Here’s a brief overview of the key sections of my profile:
