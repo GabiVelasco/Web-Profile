@@ -197,6 +197,10 @@ blockquote::after, blockquote::before {
     flex-wrap: wrap;
     padding: 10px;
     margin: 0 auto;
+    justify-items: left !important;
+    align-items: flex-start !important; /* Align items to the left */
+    justify-content: flex-start !important; /* Ensure alignment starts from the left */
+
 
   }
 
@@ -246,6 +250,9 @@ blockquote::after, blockquote::before {
         color: #ccc;
         margin: 20px auto;
         padding: 60px;
+        justify-items: left;
+        align-items: left !important;
+
  
       }
       
@@ -636,6 +643,10 @@ blockquote::after, blockquote::before {
       flex-wrap: wrap;
       padding: 10px;
       margin: 0 auto;
+      justify-items: left;
+      align-items: flex-start !important; /* Align items to the left */
+      justify-content: flex-start !important; /* Ensure alignment starts from the left */
+
   
     }
 
@@ -650,10 +661,13 @@ blockquote::after, blockquote::before {
   .projects-section{
       width: 100%;
       display: block;
-      align-items: center;
       margin: 0px auto;
       height: auto;
       padding: 0px 20px 10px 20px;
+      align-items: left !important;
+      justify-items: left;
+
+
   }
 
   .skills-section { 
@@ -955,6 +969,24 @@ blockquote::after, blockquote::before {
         background: #edca1e;
         color: #5C3979;
     }
+
+    .skills-section { 
+      margin: 20px auto;
+      display: block;
+      width: 100%;
+      top: -500px;
+      height: fit-content;
+      padding: 60px;
+         
+         
+        }
+
+        .justify {
+          text-align: justify;
+          
+      }
+      
+      .white { color:white;}
     
     
     .projects-box {
@@ -963,6 +995,10 @@ blockquote::after, blockquote::before {
         flex-wrap: wrap;
         padding: 20px;
         margin: 0 auto;
+        align-items: flex-start !important; /* Align items to the left */
+        justify-content: flex-start !important; /* Ensure alignment starts from the left */
+
+
     
       }
     
@@ -975,26 +1011,7 @@ blockquote::after, blockquote::before {
     .projects p span {
         text-align:right;
     }
-    
-    .justify {
-        text-align: justify;
-        
-    }
-    
-    .white { color:white;}
 
-    
-    .skills-section { 
-     margin: 20px auto;
-     display: block;
-     width: 100%;
-     top: -500px;
-     height: fit-content;
-     padding: 60px;
-        
-        
-       }
-        
     
         /* EXPANDING PROJECTS */
     
@@ -1006,7 +1023,11 @@ blockquote::after, blockquote::before {
             top: -400px;
             padding: 60px;
             bottom: -400px;
-           
+            align-items: flex-start !important; /* Align items to the left */
+            justify-content: flex-start; /* Ensure alignment starts from the left */
+            text-align: left; /* Align text to the left */
+
+
      
           }
           
@@ -1189,3 +1210,51 @@ blockquote::after, blockquote::before {
     
     }
 
+
+
+
+    .projects-box {
+      display: flex;
+      flex-wrap: wrap; /* Allow wrapping */
+      gap: 30px; /* Spacing between boxes */
+      padding: 20px;
+      margin: 0 auto;
+      justify-content: flex-start; /* Align boxes to the left */
+      align-items: flex-start; /* Align items to the top */
+  }
+  
+  .project {
+      flex: 1 1 calc(33.33% - 20px); /* 3 boxes per row with space */
+      background-color: #6D4D87;
+      border: 2px solid #edca1e;
+      padding: 20px;
+      border-radius: 5px;
+      box-sizing: border-box;
+      text-align: center; /* Center text inside the box */
+      min-height: 450px;
+      max-width: calc(33.33% - 20px); /* Ensure max width respects gap */
+      transition: filter 0.3s ease, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      margin: 0; /* Remove auto-centering */
+  }
+  
+  .project:hover {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -o-transform: scale(1.05);
+}
+  
+  .project img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 4px solid #edca1e;
+  }
+  
+  .project img:hover {
+      filter: grayscale(0%);
+  }
+  
