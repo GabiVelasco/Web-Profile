@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gabriela Velasco - Bytes of Poetry</title>
@@ -14,13 +13,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Roboto:300,400,500,700" rel="stylesheet" />
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <link href="style.css" rel="stylesheet" />
 
 <style>
-/* SEU CSS ORIGINAL 100% mantido */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-weight: 350; font-size: 20px; line-height: 1.3; background: #5c3979; color: #ccc; overflow-x: hidden; font-family: 'Trebuchet MS','Montserrat', sans-serif; }
 .background{ background-size: 150%; background-repeat: no-repeat; background-color:#edca1e; height: 100%; width: 50%; position: absolute; top: 0; right: 0; clip-path: circle(20% at 55% 50%); z-index: -1; }
@@ -33,14 +30,14 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
 .skill-box { display: flex; flex-wrap: wrap; width: 50%; margin: 10px auto; margin-left: 0; }
 .skill-box span { font-size: 85%; padding: 0.25rem 0.75rem; border-radius: 1rem; margin: 0 0.2rem 0.5rem 0; border: 1px solid #edca1e; display: inline-block; }
 .skill-box span:hover { background: #edca1e; color: #5C3979; }
+.skill-highlight .skill-box span { border-color: #fff; background: rgba(237,202,30,0.15); }
+.skill-highlight { border-left: 3px solid #edca1e; padding-left: 15px; margin-bottom: 25px; }
 .projects-box { display: flex; gap: 15px; flex-wrap: wrap; padding: 10px; margin: 0 auto; align-items: flex-start; justify-content: flex-start; }
 .projects-section, .skills-section { display: block; width: 100%; padding: 60px; margin: 20px auto; }
 .project { flex: 1 1 calc(33.33% - 30px); background:#6D4D87; border: 4px solid #edca1e; padding: 10px; border-radius: 5px; text-align: center; max-width: 300px; margin: 20px auto; transition: 0.3s; }
 .project:hover { transform: scale(1.05); } .project img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; border: 4px solid #edca1e; }
 .project-link { font-size: 16px; margin: 20px auto; display: inline-block; padding: 8px 12px; background: #edca1e; color: #5c3979 !important; text-decoration: none; border-radius: 5px; }
 .read-more { background: none; border: none; color: #edca1e; cursor: pointer; } .more-text { display: none; } .show-more .more-text { display: block; margin: 10px auto; text-align: justify; }
-
-/* NOVO - LANDING */
 .landing-topbar { position: fixed; top:0; left:0; width:100%; background: rgba(92,57,121,0.97); padding:12px 25px; display:flex; justify-content:space-between; align-items:center; z-index:1000; border-bottom:2px solid #edca1e; flex-wrap:wrap; gap:10px; }
 .topbar-left a { background:#edca1e; color:#5c3979 !important; padding:7px 16px; border-radius:20px; text-decoration:none; font-size:13px; font-weight:bold; }
 .btn-cta { padding:11px 20px; border-radius:30px; font-weight:700; font-size:14px; text-decoration:none; display:inline-block; transition:0.3s; }
@@ -53,19 +50,16 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
 
 <body>
 
-<!-- O RESTO É SEU HTML ORIGINAL + 3 CTA BANDS idênticas -->
-<!-- ... mantenha suas sections aboutme, skills, projects ... -->
-
-
 <div class="landing-topbar">
   <div class="topbar-left"><span style="color:#fff; font-weight:bold; font-size:14px;">MAIN LINKS:</span>
     <a href="https://gabivelasco.github.io/Dossier/" target="_blank">Dossier</a>
     <a href="https://gabivelasco.github.io/popartvita/" target="_blank">PopArt Vita</a>
     <a href="https://gabivelasco.github.io/ArtisticDance_Web/" target="_blank">Artistic Dance</a>
   </div>
-  <div style="display:flex; gap:10px; flex-wrap:wrap;">
+  <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
     <a href="mailto:gabriela.luppe@gmail.com?subject=First%20Class%20Booking" class="btn-cta btn-dance">Reserve your first class with me now</a>
     <a href="mailto:gabriela.luppe@gmail.com?subject=Meeting%20Request" class="btn-cta btn-tech">Reserve a meeting for tech / dance Beratung</a>
+    <a href="https://wa.me/4917642070836?text=Hi%20Gabriela%2C%20I%20want%20to%20book%20a%20dance%20class%20%F0%9F%92%83" target="_blank" class="btn-cta" style="display:flex; align-items:center; gap:6px; background:#25D366; color:#fff !important; border:2px solid #25D366;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
   </div>
 </div>
 <div style="padding-top:200px; padding-bottom:200px;" ></div>
@@ -74,36 +68,28 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
 
     <section>
         <div class="fifty">
-            <p>Hello, I'm</p>
+            <p>Hello, I'm</p> <img style="padding-bottom:50px; border-radius:50%;" class="dots1" src="img/artprofil-round.png" alt="Gabriela Velasco"/>
             <h1>Gabriela Velasco</h1>
             <h3>Bytes of Poetry</h3>
             <h4>An inspired <a href="#">web developer</a> with a passion for weaving together technology and artistic dance expression.</h4>
-            <div class="dots">
-
-              <img style="padding-bottom:50px;" class="dots1" src="img/artprofil-round.png" alt=""/>
-            </div>
+            <div class="dots"></div>
         </div>
-
-        
     </section>
 
-    
-
+<div style="padding-top:200px; padding-bottom:200px;" ></div>
 
     <section class="aboutme">
         <div class="fifty right">
-            
             <p>Infos</p>
             <h2>About me</h2>
-
             <article>
                 <h3>THE INTEGRATION OF DANCE AND TECHNOLOGY</h3> <br>
-                <p class="justify"> With a unique combination of dance and technology, Gabriela brings a creative perspective to the world of computer science.
+                 <p class="justify">Ballet, Contemporary Dance, Stage Dance Technick classes <br>
+                With a unique combination of dance and technology, Gabriela brings a creative perspective to the world of computer science.
                 Through her experiences as a dancer and choreographer, she integrates artistic forms of expression into her technological projects. <br><br>
                 This creative approach allows her to develop innovative solutions and create unique perspectives at the ever-evolving intersection 
                 of art and technology.</p>
             </article> <br>
-            
         <article>
             <h2>Hobbies</h2><br>
             <h3>Ballet, Contemporary Dance, Stage Dance, Sailing, Cycling, Swimming</h3><br>
@@ -115,7 +101,8 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
                 I explore paths and trails in the real world that lead me to new adventures and experiences.</p>
             <br>
         </article>
-        
+      <div style="padding-top:200px; padding-bottom:200px;" ></div>
+<div style="padding-top:200px; padding-bottom:200px;" ></div>
         <div class="quote">
           <h3>Favorite quote</h3><br>
           <blockquote class="quotetext">
@@ -124,15 +111,58 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
               and technology.
           </blockquote><br class="smallscreen">
       </div>
-      
-          
         </div>
-
     </section>
 
     <section class="skills-section">
       <div>
           <h2>Skills</h2>
+
+          <!-- ===== DANCE SKILLS - NEW ===== -->
+          <div class="skill-highlight">
+            <h3><i class="fas fa-star" style="color:#edca1e;"></i> Dance & Teaching Expertise</h3>
+            <div class="skill-box" style="width:100%">
+              <span>Contemporary Ballet</span>
+              <span>Classical Ballet</span>
+              <span>Pointe Work</span>
+              <span>Contemporary Dance</span>
+              <span>Stage Dance Technique</span>
+              <span>Improvisation & Composition</span>
+              <span>Choreography</span>
+              <span>Movement Research</span>
+              <span>Repertoire Coaching</span>
+              <span>Performance Coaching</span>
+              <span>Dance Pedagogy</span>
+              <span>Creative Dance for Kids</span>
+              <span>Adult Beginner to Advanced</span>
+              <span>Body Awareness & Alignment</span>
+              <span>Floorwork</span>
+            </div>
+          </div>
+
+          <div class="skill-highlight">
+            <h3>Movement & Wellness</h3>
+            <div class="skill-box" style="width:100%">
+              <span>Ayurveda Therapie</span>
+              <span>Anatomy for Dancers</span>
+              <span>Injury Prevention & Conditioning</span>
+              <span>Pilates-based Training</span>
+              <span>Yoga & Breathwork</span>
+              <span>Somatic Practices</span>
+            </div>
+          </div>
+
+          <div class="skill-highlight">
+            <h3>Artistic Direction</h3>
+            <div class="skill-box" style="width:100%">
+              <span>Artistic Direction</span>
+              <span>Concept Development</span>
+              <span>Stage Production</span>
+              <span>Costume & Light Awareness</span>
+              <span>Dance & Technology Fusion</span>
+              <span>Workshop Leader</span>
+            </div>
+          </div>
     
           <h3>Webdevelopment</h3>
           <div class="skill-box">
@@ -240,16 +270,12 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
           </div>
       </div>
     </section>
-    
-    
-    
-   
+
     <section class="projects-section">
         <div>
           <p>Portfolio</p>
           <h2>Some Projects</h2>
           <div class="projects-box">
-     <!-- Project 1 -->
 <div class="project">
   <h4>Artistic Dance History</h4> <br>
   <a href="https://gabivelasco.github.io/ArtisticDance_Web/"> <img src="img/dancehistory2.png" alt="Gabriela Velasco - Artistic Dance History"></a>
@@ -266,8 +292,6 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
     </span>
   </div>
 </div>
-
-<!-- Project 2 -->
 <div class="project">
   <h4>Lichtblick Zahnzentrum</h4><br>
   <a href="https://gabivelasco.github.io/Lichtblick-Zahnzentrum/">
@@ -284,8 +308,6 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
     </span>
   </div>
 </div>
-
-<!-- Project 3 -->
 <div class="project">
   <h4>Vogue Haaratelier</h4><br>
   <a href="https://gabivelasco.github.io/Vogue-Haaratelier/#home"><img src="img/vogue4.png" alt="vogue-haaratelier"></a>
@@ -301,8 +323,6 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
     </span>
   </div>
 </div>
-
-<!-- Project 4 -->
 <div class="project">
   <h4>Optifoto Site</h4><br>
   <a href="https://optifoto.de/"> <img src="img/optifoto.png" alt="photography-site"></a>
@@ -316,12 +336,8 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
     <span class="technologies">
       <strong>Technologies Used:</strong> <span>WordPress, Plesk, VPS, SSL, Domain</span>
     </span>
-   
   </div>
 </div>
-
-
-<!-- Project 5 -->
 <div class="project">
   <h4>Horizon Spa Hotel</h4><br>
   <a href="https://gabivelasco.github.io/horizon-spa-hotel/"><img src="img/horizon-spa-hotel.png" alt="horizon-spa-hotel"></a>
@@ -337,8 +353,6 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
     </span>
   </div>
 </div>
-
-<!-- Project 6 -->
 <div class="project">
   <h4>Cosmic Gallery</h4><br>
   <a href="https://gabivelasco.github.io/cosmic-gallery/"><img src="img/cosmic-gallery3.png" alt="cosmic-gallery"></a>
@@ -354,58 +368,16 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
     </span>
   </div>
 </div>
-
-
-
-
-            <!-- Project 5 -->
-            <!-- <div class="project">
-              <img src="path_to_image5.jpg" alt="weblebenslauf">
-              <div class="project-info">
-                <h4>weblebenslauf</h4>
-                <a href="https://gabivelasco.github.io/Lebenslauf-Web_2024/" class="project-link">Visit Project</a>
-                <span class="description">
-                 <a>A web-based resume.</a> 
-                 
-                  <span class="more-text">An interactive and modern resume showcasing professional experience, skills, and education in a digital format.</span>
-                </span>
-                <button class="read-more">Read More</button>
-              
-              </div>
-            </div> -->
-      
-            <!-- Project 6 -->
-            <!-- <div class="project">
-              <img src="path_to_image6.jpg" alt="web-cv">
-              <div class="project-info">
-                <h4>web-cv</h4>
-                <a href="https://gabivelasco.github.io/web_lebenslauf/" class="project-link">Visit Project</a>
-                <span class="description">
-                  <a>A personal CV website.</a>
-                  <span class="more-text">An online CV that highlights professional milestones and is accessible to employers for review.</span>
-                </span>
-                <button class="read-more">Read More</button>
-              </div>
-            </div> -->
-      
           </div>
           Github: <br> <a href="https://github.com/GabiVelasco" class="project-link" >https://github.com/GabiVelasco</a>
           <br> 
         Kontakt: <br><a href="mailto:gabriela.luppe@gmail.com" class="project-link">gabriela.luppe@gmail.com</a>
-
         <p style="text-align: center; color: grey; font-size: 14px;">
           <i class="fas fa-code"></i> Designed by Gabriela Velasco
       </p>
-
         </div>
-      
       </section>
-    
-      
-      
-
 </div>
 </body>
-
 <script src="app.js"></script>
 </html>
