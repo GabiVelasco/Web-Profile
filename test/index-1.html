@@ -1,75 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriela Velasco Web-Profile</title>
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gabriela Velasco - Bytes of Poetry</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-<script type="text/javascript" src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Roboto:300,400,500,700" rel="stylesheet" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Roboto:300,400,500,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<link href="style.css" rel="stylesheet" />
-
-<style>
-/* SEU CSS ORIGINAL 100% mantido */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-weight: 350; font-size: 20px; line-height: 1.3; background: #5c3979; color: #ccc; overflow-x: hidden; font-family: 'Trebuchet MS','Montserrat', sans-serif; }
-.background{ background-size: 150%; background-repeat: no-repeat; background-color:#edca1e; height: 100%; width: 50%; position: absolute; top: 0; right: 0; clip-path: circle(20% at 55% 50%); z-index: -1; }
-section { position: relative; width: 100%; min-height: 100vh; display: flex; align-items: center; justify-content: left; padding:20px; margin:20px; }
-.fifty { flex-direction: column; justify-content: center; padding: 4rem; gap: 1rem; width: 50%; height: 100%; display: flex; }
-.fifty.right { margin-left: 50%; }
-a { color: #edca1e; transition: 0.3s; } a:hover { transform: scale(1.05); }
-h1 { font-size: 4.5rem; } h2 { font-size: 1.8rem; } h1, h2 { font-weight: 600; } h1, h2, h3 { color: #fff; }
-h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-bottom: 5px dashed #edca1e; }
-.skill-box { display: flex; flex-wrap: wrap; width: 50%; margin: 10px auto; margin-left: 0; }
-.skill-box span { font-size: 85%; padding: 0.25rem 0.75rem; border-radius: 1rem; margin: 0 0.2rem 0.5rem 0; border: 1px solid #edca1e; display: inline-block; }
-.skill-box span:hover { background: #edca1e; color: #5C3979; }
-.projects-box { display: flex; gap: 15px; flex-wrap: wrap; padding: 10px; margin: 0 auto; align-items: flex-start; justify-content: flex-start; }
-.projects-section, .skills-section { display: block; width: 100%; padding: 60px; margin: 20px auto; }
-.project { flex: 1 1 calc(33.33% - 30px); background:#6D4D87; border: 4px solid #edca1e; padding: 10px; border-radius: 5px; text-align: center; max-width: 300px; margin: 20px auto; transition: 0.3s; }
-.project:hover { transform: scale(1.05); } .project img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; border: 4px solid #edca1e; }
-.project-link { font-size: 16px; margin: 20px auto; display: inline-block; padding: 8px 12px; background: #edca1e; color: #5c3979 !important; text-decoration: none; border-radius: 5px; }
-.read-more { background: none; border: none; color: #edca1e; cursor: pointer; } .more-text { display: none; } .show-more .more-text { display: block; margin: 10px auto; text-align: justify; }
-
-/* NOVO - LANDING */
-.landing-topbar { position: fixed; top:0; left:0; width:100%; background: rgba(92,57,121,0.97); padding:12px 25px; display:flex; justify-content:space-between; align-items:center; z-index:1000; border-bottom:2px solid #edca1e; flex-wrap:wrap; gap:10px; }
-.topbar-left a { background:#edca1e; color:#5c3979 !important; padding:7px 16px; border-radius:20px; text-decoration:none; font-size:13px; font-weight:bold; }
-.btn-cta { padding:11px 20px; border-radius:30px; font-weight:700; font-size:14px; text-decoration:none; display:inline-block; transition:0.3s; }
-.btn-dance { background:#edca1e; color:#5c3979 !important; border:2px solid #edca1e; } .btn-tech { background:transparent; color:#edca1e !important; border:2px solid #edca1e; }
-.cta-band { width:100%; padding:70px 40px; text-align:center; display:block; } .cta-band-yellow { background:#edca1e; color:#5c3979; } .cta-band-purple { background:#6D4D87; border-top:3px solid #edca1e; border-bottom:3px solid #edca1e; } .cta-band-dark { background:#1a1a1a; border-top:3px solid #edca1e; }
-.cta-buttons { display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-top:25px; }
-@media(max-width:1020px){ .fifty,.fifty.right { width:100%; margin-left:0; padding:20px; } .skill-box{width:100%} .landing-topbar{position:relative; flex-direction:column} .btn-cta{width:100%} }
-</style>
 </head>
-
 <body>
-
-<!-- O RESTO É SEU HTML ORIGINAL + 3 CTA BANDS idênticas -->
-<!-- ... mantenha suas sections aboutme, skills, projects ... -->
-
-
-<div class="landing-topbar">
-  <div class="topbar-left"><span style="color:#fff; font-weight:bold; font-size:14px;">MAIN LINKS:</span>
-    <a href="https://gabivelasco.github.io/Dossier/" target="_blank">Dossier</a>
-    <a href="https://gabivelasco.github.io/popartvita/" target="_blank">PopArt Vita</a>
-    <a href="https://gabivelasco.github.io/ArtisticDance_Web/" target="_blank">Artistic Dance</a>
-  </div>
-  <div style="display:flex; gap:10px; flex-wrap:wrap;">
-    <a href="mailto:gabriela.luppe@gmail.com?subject=First%20Class%20Booking" class="btn-cta btn-dance">Reserve your first class with me now</a>
-    <a href="mailto:gabriela.luppe@gmail.com?subject=Meeting%20Request" class="btn-cta btn-tech">Reserve a meeting for tech / dance Beratung</a>
-  </div>
-</div>
-<div style="padding-top:200px; padding-bottom:200px;" ></div>
-<div class="container">
+    <div class="container">
     <div class="background"></div>
 
     <section>
@@ -80,7 +31,7 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
             <h4>An inspired <a href="#">web developer</a> with a passion for weaving together technology and artistic dance expression.</h4>
             <div class="dots">
 
-              <img style="padding-bottom:50px;" class="dots1" src="img/artprofil-round.png" alt=""/>
+              <img class="dots1" src="img/artprofil-round.png" alt=""/>
             </div>
         </div>
 
@@ -406,6 +357,5 @@ h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-
 
 </div>
 </body>
-
 <script src="app.js"></script>
 </html>
