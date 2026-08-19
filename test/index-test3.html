@@ -34,18 +34,7 @@ h2:after{content:'';width:4rem;display:block;margin-top:.4rem;border-bottom:4px 
 
 /* HERO */
 .container{padding-top:70px}
-.background{
-  background: radial-gradient(circle at center, #edca1e 0%, #f0d84a 60%, #edca1e 100%);
-  height:120vh; width:50%; position:fixed; top:0; right:0;
-  clip-path:circle(18% at 55% 50%);
-  z-index:-1; pointer-events:none;
-  will-change:clip-path, transform;
-  transition: clip-path 0.1s linear;
-}
-.background.glow{box-shadow:0 0 80px rgba(237,202,30,.4)}
-#profile-photo{transition: transform .4s ease, box-shadow .4s ease}
-#profile-photo:hover{transform:scale(1.03)}
-
+.background{background-size:150%;background-repeat:no-repeat;background-color:#edca1e;height:100%;width:50%;position:absolute;top:0;right:0;clip-path:circle(20% at 55% 50%);z-index:-1}
 section{position:relative;width:100%;min-height:70vh;display:flex;align-items:center;justify-content:left;padding:20px;margin:20px 0}
 .fifty{flex-direction:column;justify-content:center;padding:3rem;gap:1rem;width:50%;height:100%;display:flex}
 .fifty.right{margin-left:50%}
@@ -124,7 +113,7 @@ section{position:relative;width:100%;min-height:70vh;display:flex;align-items:ce
 <section>
 <div class="fifty">
 <p data-i18n="hello">Hello, I'm</p>
-<img style="padding-bottom:30px;border-radius:50%;max-width:220px" id="profile-photo" src="img/artprofil-round.png" alt="Gabriela Velasco"/>
+<img style="padding-bottom:30px;border-radius:50%;max-width:220px" src="img/artprofil-round.png" alt="Gabriela Velasco"/>
 <h1>Gabriela Velasco</h1>
 <h3>Bytes of Poetry</h3>
 <h4 data-i18n="subtitle" style="font-size:16px;line-height:1.4">An inspired <a href="#">web developer</a> with a passion for weaving together technology and artistic dance expression.</h4>
@@ -315,71 +304,6 @@ function toggleTopbar(){
   const c = document.getElementById('topbarCollapsible');
   c.classList.toggle('open');
 }
-
-// === YELLOW CIRCLE SCROLL ANIMATION (restored) ===
-function initCircleScroll(){
-  if(typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-  gsap.registerPlugin(ScrollTrigger);
-  const bg = document.querySelector('.background');
-  const photo = document.getElementById('profile-photo');
-  if(!bg) return;
-
-  // Initial state
-  gsap.set(bg, {clipPath: 'circle(18% at 55% 50%)'});
-
-  // Animate circle following scroll - grows and moves with hero
-  gsap.to(bg, {
-    clipPath: 'circle(28% at 55% 45%)',
-    scale: 1.1,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.container',
-      start: 'top top',
-      end: '+=80%',
-      scrub: 1.2,
-    }
-  });
-
-  // Second phase: when about section comes, circle goes behind
-  gsap.to(bg, {
-    clipPath: 'circle(35% at 70% 50%)',
-    x: '10%',
-    opacity: 0.9,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: '.aboutme',
-      start: 'top 80%',
-      end: 'top 20%',
-      scrub: 1,
-    }
-  });
-
-  // Subtle parallax on photo
-  if(photo){
-    gsap.to(photo, {
-      y: -40,
-      scale: 1.05,
-      rotate: 2,
-      scrollTrigger: {
-        trigger: 'section',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 1.5
-      }
-    });
-  }
-
-  // Glow pulse when photo in view
-  ScrollTrigger.create({
-    trigger: '#profile-photo',
-    start: 'top 70%',
-    onEnter: () => bg.classList.add('glow'),
-    onLeaveBack: () => bg.classList.remove('glow'),
-  });
-}
-document.addEventListener('DOMContentLoaded', initCircleScroll);
-
-
 document.addEventListener('DOMContentLoaded', ()=>{
   const saved = localStorage.getItem('gabivelasco_lang');
   const browser = navigator.language.slice(0,2);

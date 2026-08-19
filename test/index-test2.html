@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriela Velasco - Bytes of Poetry</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Roboto:300,400,500,700" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-weight: 350; font-size: 20px; line-height: 1.3; background: #5c3979; color: #ccc; overflow-x: hidden; font-family: 'Trebuchet MS','Montserrat', sans-serif; }
+.background{ background-size: 150%; background-repeat: no-repeat; background-color:#edca1e; height: 100%; width: 50%; position: absolute; top: 0; right: 0; clip-path: circle(20% at 55% 50%); z-index: -1; }
+section { position: relative; width: 100%; min-height: 100vh; display: flex; align-items: center; justify-content: left; padding:20px; margin:20px; }
+.fifty { flex-direction: column; justify-content: center; padding: 4rem; gap: 1rem; width: 50%; height: 100%; display: flex; }
+.fifty.right { margin-left: 50%; }
+a { color: #edca1e; transition: 0.3s; } a:hover { transform: scale(1.05); }
+h1 { font-size: 4.5rem; } h2 { font-size: 1.8rem; } h1, h2 { font-weight: 600; } h1, h2, h3 { color: #fff; }
+h2:after { content: ''; width: 5rem; display: block; margin-top: 0.5rem; border-bottom: 5px dashed #edca1e; }
+.skill-box { display: flex; flex-wrap: wrap; width: 50%; margin: 10px auto; margin-left: 0; }
+.skill-box span { font-size: 85%; padding: 0.25rem 0.75rem; border-radius: 1rem; margin: 0 0.2rem 0.5rem 0; border: 1px solid #edca1e; display: inline-block; }
+.skill-box span:hover { background: #edca1e; color: #5C3979; }
+.skill-highlight .skill-box span { border-color: #fff; background: rgba(237,202,30,0.15); }
+.skill-highlight { border-left: 3px solid #edca1e; padding-left: 15px; margin-bottom: 25px; }
+.projects-box { display: flex; gap: 15px; flex-wrap: wrap; padding: 10px; margin: 0 auto; align-items: flex-start; justify-content: flex-start; }
+.projects-section, .skills-section { display: block; width: 100%; padding: 60px; margin: 20px auto; }
+.project { flex: 1 1 calc(33.33% - 30px); background:#6D4D87; border: 4px solid #edca1e; padding: 10px; border-radius: 5px; text-align: center; max-width: 300px; margin: 20px auto; transition: 0.3s; }
+.project:hover { transform: scale(1.05); } .project img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; border: 4px solid #edca1e; }
+.project-link { font-size: 16px; margin: 20px auto; display: inline-block; padding: 8px 12px; background: #edca1e; color: #5c3979 !important; text-decoration: none; border-radius: 5px; }
+.read-more { background: none; border: none; color: #edca1e; cursor: pointer; } .more-text { display: none; } .show-more .more-text { display: block; margin: 10px auto; text-align: justify; }
+.landing-topbar { position: fixed; top:0; left:0; width:100%; background: rgba(92,57,121,0.97); padding:12px 25px; display:flex; justify-content:space-between; align-items:center; z-index:1000; border-bottom:2px solid #edca1e; flex-wrap:wrap; gap:10px; }
+.topbar-left a { background:#edca1e; color:#5c3979 !important; padding:7px 16px; border-radius:20px; text-decoration:none; font-size:13px; font-weight:bold; }
+.btn-cta { padding:11px 20px; border-radius:30px; font-weight:700; font-size:14px; text-decoration:none; display:inline-block; transition:0.3s; }
+.btn-dance { background:#edca1e; color:#5c3979 !important; border:2px solid #edca1e; } .btn-tech { background:transparent; color:#edca1e !important; border:2px solid #edca1e; }
+.cta-band { width:100%; padding:70px 40px; text-align:center; display:block; } .cta-band-yellow { background:#edca1e; color:#5c3979; } .cta-band-purple { background:#6D4D87; border-top:3px solid #edca1e; border-bottom:3px solid #edca1e; } .cta-band-dark { background:#1a1a1a; border-top:3px solid #edca1e; }
+.cta-buttons { display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-top:25px; }
+.lang-switch { display:flex; gap:6px; align-items:center; background:rgba(0,0,0,0.25); padding:6px 10px; border-radius:20px; }
+.lang-switch button { background:transparent; border:1px solid #edca1e; color:#edca1e; padding:5px 10px; border-radius:15px; cursor:pointer; font-size:12px; font-weight:bold; transition:0.3s; }
+.lang-switch button.active, .lang-switch button:hover { background:#edca1e; color:#5c3979; }
+@media(max-width:1020px){ .fifty,.fifty.right { width:100%; margin-left:0; padding:20px; } .skill-box{width:100%} .landing-topbar{position:relative; flex-direction:column} .btn-cta{width:100%} }
+</style>
+</head>
+<body>
+<div class="landing-topbar">
+  <div class="topbar-left"><span style="color:#fff; font-weight:bold; font-size:14px;" data-i18n="main_links">MAIN LINKS:</span>
+    <a href="https://gabivelasco.github.io/Dossier/" target="_blank">Dossier</a>
+    <a href="https://gabivelasco.github.io/popartvita/" target="_blank">PopArt Vita</a>
+    <a href="https://gabivelasco.github.io/ArtisticDance_Web/" target="_blank">Artistic Dance</a>
+  </div>
+  <div class="lang-switch">
+    <button onclick="setLang('en')" id="btn-en" class="active">🇬🇧 EN</button>
+    <button onclick="setLang('de')" id="btn-de">🇩🇪 DE</button>
+    <button onclick="setLang('es')" id="btn-es">🇪🇸 ES</button>
+    <button onclick="setLang('pt')" id="btn-pt">🇧🇷 PT</button>
+  </div>
+  <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+    <a href="mailto:gabriela.luppe@gmail.com?subject=First%20Class%20Booking" class="btn-cta btn-dance" data-i18n="btn_class">Reserve your first class with me now</a>
+    <a href="mailto:gabriela.luppe@gmail.com?subject=Meeting%20Request" class="btn-cta btn-tech" data-i18n="btn_meeting">Reserve a meeting for tech / dance Beratung</a>
+    <a href="https://wa.me/4917642070836?text=Hi%20Gabriela%2C%20I%20want%20to%20book%20a%20dance%20class%20%F0%9F%92%83" id="wa-link" target="_blank" class="btn-cta" style="display:flex; align-items:center; gap:6px; background:#25D366; color:#fff !important; border:2px solid #25D366;"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+  </div>
+</div>
+<div style="padding-top:200px; padding-bottom:100px;" ></div>
+<div style="padding-top:200px; padding-bottom:200px;" ></div>
+<div class="container">
+    <div class="background"></div>
+    <section>
+        <div class="fifty">
+            <p data-i18n="hello">Hello, I'm</p> <img style="padding-bottom:50px; border-radius:50%;" class="dots1" src="img/artprofil-round.png" alt="Gabriela Velasco"/>
+            <h1>Gabriela Velasco</h1>
+            <h3>Bytes of Poetry</h3>
+            <h4 data-i18n="subtitle">An inspired <a href="#">web developer</a> with a passion for weaving together technology and artistic dance expression.</h4>
+            <div class="dots"></div>
+            <div class="quote">
+          <h3 data-i18n="fav_quote">Favorite quote</h3><br>
+          <blockquote class="quotetext" data-i18n="quote">I sculpt the digital space,<br class="smallscreen">moving gracefully between art<br class="smallscreen">and technology.</blockquote><br class="smallscreen">
+      </div>
+        </div>
+    </section>
+<div style="padding-top:200px; padding-bottom:200px;" ></div>
+<div style="padding-top:200px; padding-bottom:200px;" ></div>
+    <section class="aboutme">
+        <div class="fifty right">
+            <p data-i18n="infos">Infos</p>
+            <h2 data-i18n="about">About me</h2>
+            <article>
+                <h3 data-i18n="integration_title">THE INTEGRATION OF DANCE AND TECHNOLOGY</h3> <br>
+                 <p class="justify" data-i18n="integration_text">Ballet, Contemporary Dance, Stage Dance Technick classes <br> With a unique combination of dance and technology, Gabriela brings a creative perspective to the world of computer science. Through her experiences as a dancer and choreographer, she integrates artistic forms of expression into her technological projects. <br><br> This creative approach allows her to develop innovative solutions and create unique perspectives at the ever-evolving intersection of art and technology.</p>
+            </article> <br>
+        <article>
+            <h2 data-i18n="hobbies_title">Hobbies</h2><br>
+            <h3>Ballet, Contemporary Dance, Stage Dance, Sailing, Cycling, Swimming</h3><br>
+            <p class="justify" data-i18n="hobbies_text">As a software developer, I have a passion for engaging with technology and innovation. In my free time, I combine this passion with a love for nature and an active lifestyle. Dance and cycling are ways for me to express myself creatively and stay physically active, while enjoying the sense of freedom and movement. Just as I explore the limits of technology in the virtual world, I explore paths and trails in the real world that lead me to new adventures and experiences.</p>
+            <br>
+        </article>
+      <div style="padding-top:200px; padding-bottom:200px;" ></div>
+      <div style="padding-top:200px; padding-bottom:200px;" ></div>
+      <div style="padding-top:200px; padding-bottom:200px;" ></div>
+        </div>
+    </section>
+    <section class="skills-section">
+      <div>
+          <h2 data-i18n="skills">Skills</h2>
+          <div class="skill-highlight">
+            <h3><i class="fas fa-star" style="color:#edca1e;"></i> <span data-i18n="dance_expertise">Dance & Teaching Expertise</span></h3>
+            <div class="skill-box" style="width:100%">
+              <span>Contemporary Ballet</span><span>Classical Ballet</span><span>Pointe Work</span><span>Contemporary Dance</span><span>Stage Dance Technique</span><span>Improvisation & Composition</span><span>Choreography</span><span>Movement Research</span><span>Repertoire Coaching</span><span>Performance Coaching</span><span>Dance Pedagogy</span><span>Creative Dance for Kids</span><span>Adult Beginner to Advanced</span><span>Body Awareness & Alignment</span><span>Floorwork</span>
+            </div>
+          </div>
+          <div class="skill-highlight">
+            <h3 data-i18n="movement_wellness">Movement & Wellness</h3>
+            <div class="skill-box" style="width:100%"><span>Ayurveda Therapie</span><span>Anatomy for Dancers</span><span>Injury Prevention & Conditioning</span><span>Pilates-based Training</span><span>Yoga & Breathwork</span><span>Somatic Practices</span></div>
+          </div>
+          <div class="skill-highlight">
+            <h3 data-i18n="artistic_direction">Artistic Direction</h3>
+            <div class="skill-box" style="width:100%"><span>Artistic Direction</span><span>Concept Development</span><span>Stage Production</span><span>Costume & Light Awareness</span><span>Dance & Technology Fusion</span><span>Workshop Leader</span></div>
+          </div>
+          <h3 data-i18n="webdev">Webdevelopment</h3>
+          <div class="skill-box"><span>Angular</span><span>React</span><span>JavaScript</span><span>TypeScript</span><span>HTML5</span><span>SCSS</span><span>REST API</span><span>WordPress</span><span>Firebase</span><span>Spring Boot</span><span>Java</span><span>Prisma</span><span>Node.js</span></div>
+          <h3 data-i18n="frontend">Frontend-Entwicklung & Design</h3>
+          <div class="skill-box"><span>Figma</span><span>Responsives Design</span><span>Tailwind</span><span>Bootstrap Framework</span><span>SASS</span><span>Gimp</span><span>Da Vinci Resolve</span><span>Blender</span><span>Canva</span></div>
+          <h3 data-i18n="databases">Datenbanken</h3>
+          <div class="skill-box"><span>Firestore</span><span>MongoDB</span><span>MySQL</span><span>PostgresSQL</span></div>
+          <h3 data-i18n="tools">Tools & Versionierung</h3>
+          <div class="skill-box"><span>Git</span><span>GitLab</span><span>GitHub</span><span>Visual Studio Code</span><span>IntelliJ</span></div>
+          <h3 data-i18n="itadmin">IT-Administration</h3>
+          <div class="skill-box"><span>Baramundi (MDM-Lösungen)</span><span>Zoom per SSO</span><span>Cisco Jabber Telefon</span><span>HSNet</span><span>OpenVPN</span><span>Znuny LTS</span><span>Scanner SEFEQ</span><span>DNS, DHCP, Firewall</span><span>Oracle</span><span>Oracle VM Virtual Box</span><span>VPN</span><span>Proxy</span><span>LAN, WLAN, WAN</span><span>Linux, Windows 10</span><span>Hyper-V</span><span>TeamViewer</span><span>Skype for Business</span><span>PowerShell</span><span>Active Directory</span><span>Azure AD</span><span>Entra ID</span></div>
+          <h3 data-i18n="edv">EDV & Projektmanagement</h3>
+          <div class="skill-box"><span>MS Office: Word, Outlook, Excel, PowerPoint, Libre Office, Office365</span><span>Jira</span><span>Atlassian</span><span>CaMS</span><span>ERP-Systeme</span><span>HISinOne</span></div>
+          <h3 data-i18n="iot">IoT</h3>
+          <div class="skill-box"><span>ESP32</span><span>Arduino</span></div>
+          <h3 data-i18n="other">Weitere Fähigkeiten</h3>
+          <div class="skill-box"><span>Python</span><span>PHP</span><span>JSON</span><span>XML</span><span>Blender</span></div>
+          <h3 data-i18n="languages">Languages</h3>
+          <div class="skill-box"><span>English</span><span>Portuguese</span><span>German</span><span>Spanish</span></div>
+      </div>
+    </section>
+    <section class="projects-section">
+        <div>
+          <p data-i18n="portfolio">Portfolio</p>
+          <h2 data-i18n="projects_title">Some Projects</h2>
+          <div class="projects-box">
+<div class="project"><h4>Artistic Dance History</h4> <br><a href="https://gabivelasco.github.io/ArtisticDance_Web/"> <img src="img/dancehistory2.png" alt="Gabriela Velasco - Artistic Dance History"></a><div class="project-info"><a href="https://gabivelasco.github.io/ArtisticDance_Web/" class="project-link" data-i18n="visit">Visit Site</a><span class="description"><a data-i18n="proj1_desc">Artistic journey in dance.</a></span></div></div>
+<div class="project"><h4>Lichtblick Zahnzentrum</h4><br><a href="https://gabivelasco.github.io/Lichtblick-Zahnzentrum/"><img src="img/lichtblick2.png" alt="lichtblick-zahnzentrum"></a><div class="project-info"><a href="https://gabivelasco.github.io/Lichtblick-Zahnzentrum/" class="project-link" data-i18n="visit">Visit Site</a><span class="description"><a data-i18n="proj2_desc">A dental clinic website.</a></span></div></div>
+<div class="project"><h4>Vogue Haaratelier</h4><br><a href="https://gabivelasco.github.io/Vogue-Haaratelier/#home"><img src="img/vogue4.png" alt="vogue-haaratelier"></a><div class="project-info"><a href="https://gabivelasco.github.io/Vogue-Haaratelier/#home" class="project-link" data-i18n="visit">Visit Site</a><span class="description"><a data-i18n="proj3_desc">A website for a hair salon.</a></span></div></div>
+<div class="project"><h4>Optifoto Site</h4><br><a href="https://optifoto.de/"> <img src="img/optifoto.png" alt="photography-site"></a><div class="project-info"><a href="https://optifoto.de/" class="project-link" data-i18n="visit">Visit Site</a><span class="description"><a data-i18n="proj4_desc">A photography portfolio website.</a></span></div></div>
+<div class="project"><h4>Horizon Spa Hotel</h4><br><a href="https://gabivelasco.github.io/horizon-spa-hotel/"><img src="img/horizon-spa-hotel.png" alt="horizon-spa-hotel"></a><div class="project-info"><a href="https://gabivelasco.github.io/horizon-spa-hotel/" class="project-link" data-i18n="visit">Visit Site</a><span class="description"><a data-i18n="proj5_desc">A luxurious spa hotel website.</a></span></div></div>
+<div class="project"><h4>Cosmic Gallery</h4><br><a href="https://gabivelasco.github.io/cosmic-gallery/"><img src="img/cosmic-gallery3.png" alt="cosmic-gallery"></a><div class="project-info"><a href="https://gabivelasco.github.io/cosmic-gallery/" class="project-link" data-i18n="visit">Visit Site</a><span class="description"><a data-i18n="proj6_desc">A visual exploration of NASA's Astronomy Pictures.</a></span></div></div>
+          </div>
+          Github: <br> <a href="https://github.com/GabiVelasco" class="project-link" >https://github.com/GabiVelasco</a><br> 
+        <span data-i18n="contact">Kontakt:</span> <br><a href="mailto:gabriela.luppe@gmail.com" class="project-link">gabriela.luppe@gmail.com</a>
+        <p style="text-align: center; color: grey; font-size: 14px;"><i class="fas fa-code"></i> <span data-i18n="designed">Designed by Gabriela Velasco</span></p>
+        </div>
+      </section>
+</div>
+<script>
+// ONLY LANGUAGES ADDED - NO POSITION CHANGES
+const translations = {
+  en: {
+    main_links: "MAIN LINKS:",
+    btn_class: "Reserve your first class with me now",
+    btn_meeting: "Reserve a meeting for tech / dance Beratung",
+    hello: "Hello, I'm",
+    subtitle: "An inspired <a href='#'>web developer</a> with a passion for weaving together technology and artistic dance expression.",
+    fav_quote: "Favorite quote",
+    quote: "I sculpt the digital space,<br class='smallscreen'>moving gracefully between art<br class='smallscreen'>and technology.",
+    infos: "Infos",
+    about: "About me",
+    integration_title: "THE INTEGRATION OF DANCE AND TECHNOLOGY",
+    integration_text: "Ballet, Contemporary Dance, Stage Dance Technick classes <br> With a unique combination of dance and technology, Gabriela brings a creative perspective to the world of computer science. Through her experiences as a dancer and choreographer, she integrates artistic forms of expression into her technological projects. <br><br> This creative approach allows her to develop innovative solutions and create unique perspectives at the ever-evolving intersection of art and technology.",
+    hobbies_title: "Hobbies",
+    hobbies_text: "As a software developer, I have a passion for engaging with technology and innovation. In my free time, I combine this passion with a love for nature and an active lifestyle. Dance and cycling are ways for me to express myself creatively and stay physically active, while enjoying the sense of freedom and movement. Just as I explore the limits of technology in the virtual world, I explore paths and trails in the real world that lead me to new adventures and experiences.",
+    skills: "Skills",
+    dance_expertise: "Dance & Teaching Expertise",
+    movement_wellness: "Movement & Wellness",
+    artistic_direction: "Artistic Direction",
+    webdev: "Webdevelopment",
+    frontend: "Frontend-Entwicklung & Design",
+    databases: "Datenbanken",
+    tools: "Tools & Versionierung",
+    itadmin: "IT-Administration",
+    edv: "EDV & Projektmanagement",
+    iot: "IoT",
+    other: "Weitere Fähigkeiten",
+    languages: "Languages",
+    portfolio: "Portfolio",
+    projects_title: "Some Projects",
+    visit: "Visit Site",
+    proj1_desc: "Artistic journey in dance.",
+    proj2_desc: "A dental clinic website.",
+    proj3_desc: "A website for a hair salon.",
+    proj4_desc: "A photography portfolio website.",
+    proj5_desc: "A luxurious spa hotel website.",
+    proj6_desc: "A visual exploration of NASA's Astronomy Pictures.",
+    contact: "Kontakt:",
+    designed: "Designed by Gabriela Velasco",
+    wa_msg: "Hi%20Gabriela%2C%20I%20want%20to%20book%20a%20dance%20class%20%F0%9F%92%83"
+  },
+  de: {
+    main_links: "WICHTIGE LINKS:",
+    btn_class: "Jetzt erste Tanzstunde reservieren",
+    btn_meeting: "Beratungstermin für Tech / Tanz",
+    hello: "Hallo, ich bin",
+    subtitle: "Eine inspirierte Webentwicklerin mit Leidenschaft für die Verbindung von Technologie und künstlerischem Tanz.",
+    fav_quote: "Lieblingszitat",
+    quote: "Ich forme den digitalen Raum,<br class='smallscreen'>bewege mich anmutig zwischen<br class='smallscreen'>Kunst und Technologie.",
+    infos: "Infos",
+    about: "Über mich",
+    integration_title: "DIE VERBINDUNG VON TANZ UND TECHNOLOGIE",
+    integration_text: "Ballett, Contemporary Dance, Bühnentanz-Technik <br> Mit einer einzigartigen Kombination aus Tanz und Technologie bringt Gabriela eine kreative Perspektive in die Informatik. Durch ihre Erfahrungen als Tänzerin und Choreografin integriert sie künstlerische Ausdrucksformen in ihre technologischen Projekte. <br><br> Dieser kreative Ansatz ermöglicht innovative Lösungen an der Schnittstelle von Kunst und Technologie.",
+    hobbies_title: "Hobbys",
+    hobbies_text: "Als Softwareentwicklerin begeistere ich mich für Technologie und Innovation. In meiner Freizeit verbinde ich das mit Natur und einem aktiven Lebensstil. Tanz und Radfahren sind für mich kreativer Ausdruck und körperlicher Ausgleich. So wie ich in der virtuellen Welt die Grenzen der Technologie erkunde, entdecke ich in der realen Welt neue Wege und Abenteuer.",
+    skills: "Fähigkeiten",
+    dance_expertise: "Tanz- & Unterrichtsexpertise",
+    movement_wellness: "Bewegung & Wellness",
+    artistic_direction: "Künstlerische Leitung",
+    webdev: "Webentwicklung",
+    frontend: "Frontend-Entwicklung & Design",
+    databases: "Datenbanken",
+    tools: "Tools & Versionierung",
+    itadmin: "IT-Administration",
+    edv: "EDV & Projektmanagement",
+    iot: "IoT",
+    other: "Weitere Fähigkeiten",
+    languages: "Sprachen",
+    portfolio: "Portfolio",
+    projects_title: "Einige Projekte",
+    visit: "Seite besuchen",
+    proj1_desc: "Künstlerischer Werdegang im Tanz.",
+    proj2_desc: "Eine Zahnklinik-Website.",
+    proj3_desc: "Eine Website für einen Friseursalon.",
+    proj4_desc: "Eine Fotografie-Portfolio-Website.",
+    proj5_desc: "Eine luxuriöse Spa-Hotel-Website.",
+    proj6_desc: "Eine visuelle Erkundung der NASA Astronomy Pictures.",
+    contact: "Kontakt:",
+    designed: "Designt von Gabriela Velasco",
+    wa_msg: "Hallo%20Gabriela%21%20%F0%9F%92%83%20Ich%20m%C3%B6chte%20eine%20Tanzstunde%20buchen."
+  },
+  es: {
+    main_links: "ENLACES PRINCIPALES:",
+    btn_class: "Reserva tu primera clase ahora",
+    btn_meeting: "Reserva asesoría en tecnología / danza",
+    hello: "Hola, soy",
+    subtitle: "Una desarrolladora web inspirada con pasión por entrelazar tecnología y expresión artística de la danza.",
+    fav_quote: "Cita favorita",
+    quote: "Esculpo el espacio digital,<br class='smallscreen'>moviéndome con gracia entre<br class='smallscreen'>el arte y la tecnología.",
+    infos: "Información",
+    about: "Sobre mí",
+    integration_title: "LA INTEGRACIÓN DE LA DANZA Y LA TECNOLOGÍA",
+    integration_text: "Clases de Ballet, Danza Contemporánea, Técnica de Danza Escénica <br> Con una combinación única de danza y tecnología, Gabriela aporta una perspectiva creativa a la informática. A través de sus experiencias como bailarina y coreógrafa, integra formas artísticas en sus proyectos tecnológicos. <br><br> Este enfoque creativo permite desarrollar soluciones innovadoras en la intersección entre arte y tecnología.",
+    hobbies_title: "Pasatiempos",
+    hobbies_text: "Como desarrolladora de software, me apasiona la tecnología y la innovación. En mi tiempo libre combino esa pasión con amor por la naturaleza y vida activa. La danza y el ciclismo son expresión creativa y actividad física. Así como exploro los límites de la tecnología en el mundo virtual, exploro caminos reales que me llevan a nuevas aventuras.",
+    skills: "Habilidades",
+    dance_expertise: "Danza y Experiencia Docente",
+    movement_wellness: "Movimiento y Bienestar",
+    artistic_direction: "Dirección Artística",
+    webdev: "Desarrollo Web",
+    frontend: "Desarrollo Frontend y Diseño",
+    databases: "Bases de Datos",
+    tools: "Herramientas y Versionado",
+    itadmin: "Administración de TI",
+    edv: "Informática y Gestión de Proyectos",
+    iot: "IoT",
+    other: "Otras Habilidades",
+    languages: "Idiomas",
+    portfolio: "Portafolio",
+    projects_title: "Algunos Proyectos",
+    visit: "Visitar sitio",
+    proj1_desc: "Trayectoria artística en la danza.",
+    proj2_desc: "Sitio web de clínica dental.",
+    proj3_desc: "Sitio web para salón de peluquería.",
+    proj4_desc: "Portafolio de fotografía.",
+    proj5_desc: "Sitio web de hotel spa de lujo.",
+    proj6_desc: "Exploración visual de imágenes de la NASA.",
+    contact: "Contacto:",
+    designed: "Diseñado por Gabriela Velasco",
+    wa_msg: "Hola%20Gabriela%2C%20quiero%20reservar%20una%20clase%20de%20danza%20%F0%9F%92%83"
+  },
+  pt: {
+    main_links: "LINKS PRINCIPAIS:",
+    btn_class: "Reserve sua primeira aula agora",
+    btn_meeting: "Agende consultoria tech / dança",
+    hello: "Olá, eu sou",
+    subtitle: "Uma desenvolvedora web inspirada, apaixonada por entrelaçar tecnologia e expressão artística da dança.",
+    fav_quote: "Citação favorita",
+    quote: "Eu esculpo o espaço digital,<br class='smallscreen'>transitando com leveza entre<br class='smallscreen'>arte e tecnologia.",
+    infos: "Informações",
+    about: "Sobre mim",
+    integration_title: "A INTEGRAÇÃO DA DANÇA E TECNOLOGIA",
+    integration_text: "Aulas de Ballet, Dança Contemporânea, Técnica de Dança de Palco <br> Com uma combinação única de dança e tecnologia, Gabriela traz uma perspectiva criativa para a ciência da computação. Através de suas experiências como bailarina e coreógrafa, integra formas artísticas em seus projetos tecnológicos. <br><br> Essa abordagem criativa permite desenvolver soluções inovadoras na interseção entre arte e tecnologia.",
+    hobbies_title: "Hobbies e Paixões",
+    hobbies_text: "Como desenvolvedora de software, sou apaixonada por tecnologia e inovação. No tempo livre, combino essa paixão com amor pela natureza e estilo de vida ativo. Dança e ciclismo são expressão criativa e atividade física. Assim como exploro os limites da tecnologia no mundo virtual, exploro trilhas reais que me levam a novas aventuras.",
+    skills: "Habilidades",
+    dance_expertise: "Dança & Expertise em Ensino",
+    movement_wellness: "Movimento & Bem-Estar",
+    artistic_direction: "Direção Artística",
+    webdev: "Desenvolvimento Web",
+    frontend: "Desenvolvimento Frontend & Design",
+    databases: "Bancos de Dados",
+    tools: "Ferramentas & Versionamento",
+    itadmin: "Administração de TI",
+    edv: "TI & Gerenciamento de Projetos",
+    iot: "IoT",
+    other: "Outras Habilidades",
+    languages: "Idiomas",
+    portfolio: "Portfólio",
+    projects_title: "Alguns Projetos",
+    visit: "Visitar site",
+    proj1_desc: "Jornada artística na dança.",
+    proj2_desc: "Site de clínica odontológica.",
+    proj3_desc: "Site para salão de cabeleireiro.",
+    proj4_desc: "Portfólio de fotografia.",
+    proj5_desc: "Site de hotel spa de luxo.",
+    proj6_desc: "Exploração visual das imagens da NASA.",
+    contact: "Contato:",
+    designed: "Criado por Gabriela Velasco",
+    wa_msg: "Ol%C3%A1%20Gabriela%2C%20quero%20reservar%20uma%20aula%20de%20dan%C3%A7a%20%F0%9F%92%83"
+  }
+};
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('btn-'+lang).classList.add('active');
+  const t = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.getAttribute('data-i18n');
+    if(t[k]) el.innerHTML = t[k];
+  });
+  document.getElementById('wa-link').href = `https://wa.me/4917642070836?text=${t.wa_msg}`;
+  localStorage.setItem('gabivelasco_lang', lang);
+}
+document.addEventListener('DOMContentLoaded', ()=>{
+  const saved = localStorage.getItem('gabivelasco_lang');
+  const browser = navigator.language.slice(0,2);
+  if(saved && translations[saved]) setLang(saved);
+  else if(translations[browser]) setLang(browser);
+  else setLang('en');
+});
+</script>
+</body>
+</html>
